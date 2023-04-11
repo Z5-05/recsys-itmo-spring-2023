@@ -1,14 +1,12 @@
 ### Запуск в целом все тот же, что и обычно.
 
-в [botify/data](../botify/data) лежат три файла: 
+В [botify/data](../botify/data) лежат три файла: 
 1. Рекомендации контекстного рекоммендера ```contextual_tracks.json``` с ключами типа ```{'tracks': str, 'recommendations': List[Int]}```. Его поле в config.json - ```CONTEXTUAL_RECOMENDATIONS_FILE_PATH```;
 2. Общий *json* с треками - ```{'artist': str, 'title': str, 'track': int}```, поле в конфиге - ```TRACKS_FILE_PATH```;
 3. Данные собственного рекоммендера (о его логике в отчете) со структурой ```{'user': int, 'recommendations': List[Int]}```, поле в конфиге - ```CUSTOM_RECOMENDATIONS_FILE_PATH```.
-<br>
+______
 Запускается все через:
-```
-docker-compose up -d --build
-```
+```docker-compose up -d --build```
 Как обычно проверяем все через:
 ```
 curl http://localhost:5000/
@@ -25,4 +23,4 @@ docker cp recommender-container:/app/log/data.json ~/MADE/recsys-itmo-spring-202
 ______
 Про рекоммендер и его обучение инфа здесь же, в [REPORT.md](REPORT.md).
 ______
-**Файл с пользовательскими сессиями для обучения оказался слишком большим, поэтому его можно найти [тут](https://disk.yandex.ru/d/7rypJRo-ObwM-Q), а потом перекинуть в [homework/data](./data/)**
+**Файл с пользовательскими сессиями для обучения оказался слишком большим, поэтому его можно найти [тут](https://disk.yandex.ru/d/7rypJRo-ObwM-Q), а потом перекинуть в [homework/data](./data/)**.
