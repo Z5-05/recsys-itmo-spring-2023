@@ -2,7 +2,7 @@ import requests
 from typing import Dict
 
 from .recommender import Recommender
-from ..envs import RemoteRecommenderConfig
+from envs import RemoteRecommenderConfig
 
 from urllib.parse import urlunsplit, urlencode
 

@@ -4,7 +4,7 @@ from urllib.parse import urlunsplit
 import requests
 
 from .recommender import Recommender
-from ..envs import RemoteRecommenderConfig
+from envs import RemoteRecommenderConfig
 
 SCHEME = "http"
 
